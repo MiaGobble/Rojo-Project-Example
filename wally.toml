@@ -1,0 +1,17 @@
+[package]
+name = "miagobble/rojo-project-example"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Seam = "miagobble/seam@0.5.6"
+Bucket = "miagobble/bucket@1.0.4"
+Symbol = "miagobble/symbol@1.0.2"
+Typer = "miagobble/typer@0.1.1"
+TracebackUtils = "miagobble/traceback-utils@1.0.1"
+SeamStoryUtils = "miagobble/seam-story-utils@0.1.3"
+ProgressionUtils = "miagobble/progression-utils@1.0.2"
+Initializer = "miagobble/initializer@1.0.0"
+Expressive-prompts = "miagobble/expressive-prompts@1.1.4"
+Signal = "miagobble/signal@1.0.1"

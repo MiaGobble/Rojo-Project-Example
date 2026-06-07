@@ -1,0 +1,29 @@
+name: Publish to Roblox
+
+on:
+  push:
+    branches:
+      - main  # Only publish when merging into main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rokit
+        uses: CompeyDev/setup-rokit@v0.1.2
+
+      - name: Install Wally Packages
+        run: wally install
+
+      - name: Run Build Script
+        run: lune run lune/build.luau
+
+      - name: Run Publish Script
+        env:
+          ROBLOX_API_KEY: ${{ secrets.ROBLOX_API_KEY }}
+          UNIVERSE_ID: ${{ secrets.UNIVERSE_ID }}
+          PLACE_ID: ${{ secrets.PLACE_ID }}
+        run: lune run lune/publish.luau

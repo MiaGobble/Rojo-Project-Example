@@ -1,0 +1,45 @@
+{
+  "name": "Rojo-Project-Example",
+
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
+
+      "Data": {
+        "$path": "src/Shared/Data"
+      },
+
+      "SharedModules": {
+        "$path": "src/Shared/SharedModules",
+
+        "Packages": {
+          "$path": "Packages"
+        }
+      },
+
+      "Remotes": {
+        "$path": "src/Shared/Remotes.model.json"
+      }
+    },
+
+    "ReplicatedFirst": {
+      "Modules": {
+        "$path": "src/Client/Modules"
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/Client/Client"
+        }
+      }
+    },
+
+    "ServerScriptService": {
+      "$path": "src/Server"
+    }
+  }
+}
