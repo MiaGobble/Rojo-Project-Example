@@ -2,10 +2,7 @@
 sidebar_position: 1
 ---
 
-# How to install
-If you're wanting to use this example structure for your own Roblox project, start by downloading the template from [the releases page](https://github.com/MiaGobble/Rojo-Project-Example/releases).
-
-## Features
+# About this template
 This template repository boasts an awesome workflow! Some cool things about this include:
 * A fully managed Rojo workflow
 * Automated publishing
@@ -18,4 +15,6 @@ This template repository boasts an awesome workflow! Some cool things about this
 * Everything pre-placed (selene, rokit, aftman, etc)
 
 ## How do I use this?
+If you're wanting to use this example structure for your own Roblox project, start by downloading the template from [the releases page](https://github.com/MiaGobble/Rojo-Project-Example/releases).
+
 Read the rest of the documentation here to learn more about how to use all of the features, and how to set up your project fully.
