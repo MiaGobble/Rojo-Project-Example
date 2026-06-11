@@ -6,7 +6,19 @@ sidebar_position: 3
 The workflow on this project is pretty simple!
 
 ## Editing code
-Code is edited locally, using a tool like Visual Studio Code. Use Rojo to sync your code to your local `game.rbxlx` place file.
+Code is edited locally, using a tool like Visual Studio Code. Use Rojo to sync your code to your local `build.rbxl` place file.
+
+Create `build.rbxl`, just run the following command in your project's terminal:
+
+```
+lune run lune/build
+```
+
+:::danger
+
+**DO NOT EDIT/SYNC CODE IN `game.rbxlx`**! This can lead to massive, difficult-to-fix merge conflicts.
+
+:::
 
 ## Editing assets or services
 Edit assets/services directly in `game.rbxlx`. Save these changes by saving the file normally.
