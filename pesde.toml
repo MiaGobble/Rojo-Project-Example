@@ -1,0 +1,43 @@
+name = "miagobble/rojo_project_example"
+version = "0.1.0"
+description = "Template repository for fully managed Rojo projects"
+license = "MIT"
+authors = ["MiaGobble"]
+repository = "https://github.com/MiaGobble/Rojo-Project-Example"
+private = true
+
+[target]
+environment = "roblox"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[place]
+shared = "game.ReplicatedStorage.SharedModules.Packages"
+
+[scripts]
+roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
+
+[engines]
+pesde = "^0.7.0"
+lune = "^0.10.4"
+
+[dev_dependencies]
+scripts = { name = "pesde/scripts_rojo", version = "^0.2.0", target = "lune" }
+rojo = { name = "pesde/rojo", version = "^7.7.0", target = "lune" }
+
+[dependencies]
+Seam = { wally = "miagobble/seam", version = "=0.5.6" }
+Bucket = { wally = "miagobble/bucket", version = "=1.0.4" }
+Symbol = { wally = "miagobble/symbol", version = "=1.0.2" }
+Typer = { wally = "miagobble/typer", version = "=0.1.1" }
+TracebackUtils = { wally = "miagobble/traceback-utils", version = "=1.0.1" }
+SeamStoryUtils = { wally = "miagobble/seam-story-utils", version = "=0.1.3" }
+ProgressionUtils = { wally = "miagobble/progression-utils", version = "=1.0.2" }
+Initializer = { wally = "miagobble/initializer", version = "=1.0.0" }
+ExpressivePrompts = { wally = "miagobble/expressive-prompts", version = "=1.1.4" }
+Signal = { wally = "miagobble/signal", version = "=1.0.1" }

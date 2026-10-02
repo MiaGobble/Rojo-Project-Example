@@ -5,9 +5,12 @@
 # Local builds
 build.rbxl
 
-# Wally
-/Packages
-/wally.lock
+# Pesde
+/roblox_packages
+/roblox_server_packages
+/luau_packages
+/lune_packages
+/.pesde
 
 # Rojo
 sourcemap.json

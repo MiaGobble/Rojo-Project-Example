@@ -15,7 +15,7 @@
         "$path": "src/Shared/SharedModules",
 
         "Packages": {
-          "$path": "Packages"
+          "$path": "roblox_packages"
         }
       },
 

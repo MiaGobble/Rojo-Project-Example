@@ -6,14 +6,14 @@ sidebar_position: 2
 You'll need to do a couple of things get this all set up, including:
 * GitHub
 * Rojo
-* Wally
+* Pesde
 * And more!
 
 ## First-time stuff
 You'll need to do a few things as a one-time thing, if you have not already. You only need to do these once for them to work for all of your projects!
 
 ### Installing Rokit
-You will need [Rokit](https://github.com/rojo-rbx/rokit) to use Rojo, Wally, and Lune.
+You will need [Rokit](https://github.com/rojo-rbx/rokit) to use Rojo, Pesde, and Lune.
 
 To download Rokit on macOS or Linux, run this in your terminal:
 ```
@@ -33,6 +33,9 @@ First, you'll need to publish your repository on GitHub. To do so, do the follow
 
 ### Installing tools
 To install the tools included with the project, run `rokit install` in the folder's terminal.
+
+### Installing packages
+To install project packages, run `pesde install` in the folder's terminal.
 
 ### Generating initial sourcemap
 To generate the initial sourcemap, run this in your terminal:

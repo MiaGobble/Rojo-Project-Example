@@ -46,9 +46,22 @@ As a note, the first time you push, you should set up GitHub pages. Go to your G
 
 :::
 
-## Using Wally packages
-To add packages to your game, check out what you can get at https://wally.run/. Copy the dependencies and paste them into `wally.toml`.
+## Using Pesde packages
+To add packages to your game, you can use packages from the [pesde registry](https://pesde.dev/) or the [Wally registry](https://wally.run/).
 
-To install Wally packages, run the following in the terminal:
-* `wally install` (to install the packages folder)
-* `wally-package-types --sourcemap sourcemap.json Packages/` (to fix typechecking)
+Add a pesde package:
+```
+pesde add scope/package
+```
+
+Add a Wally package:
+```
+pesde add wally#scope/package
+```
+
+Then install dependencies:
+```
+pesde install
+```
+
+Packages are installed into `roblox_packages/` and synced to `ReplicatedStorage.SharedModules.Packages` via Rojo. Typechecking for Wally dependencies is handled automatically by pesde's `sourcemap_generator` script during install.
