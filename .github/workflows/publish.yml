@@ -3,7 +3,7 @@ name: Publish to Roblox
 on:
   push:
     branches:
-      - main  # Only publish when merging into main
+      - none  # Change this to "main" or whatever the master branch is called
 
 jobs:
   publish:
