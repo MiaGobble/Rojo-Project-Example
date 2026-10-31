@@ -18,3 +18,6 @@ This template repository boasts an awesome workflow! Some cool things about this
 If you're wanting to use this example structure for your own Roblox project, start by downloading the template from [the releases page](https://github.com/MiaGobble/Rojo-Project-Example/releases).
 
 Read the rest of the documentation here to learn more about how to use all of the features, and how to set up your project fully.
+
+## Comprehensive workflow
+This is not a comprehensive guide on how you set up your project, instead just manging much of the boilerplate for you. If you want, you can read the Oxomo Coding Conventions for information like that: https://miagobble.github.io/Oxomo-Coding-Conventions/
