@@ -12,7 +12,7 @@
     2. It fixes bugs that would otherwise be caused by Rojo building
 
     R15 avatar settings can be toggled using the IS_R15_ENABLED constant. If you want to change specific properties, you can modify the code block that implements the R15 properties accordingly.
-    Do note that the R15-related settings only take effect on the local build, and do not affect the published game.
+    Do note that the R15-related settings only take effect on the local build, and do not affect the published game. This is because published game settings take priority over local settings.
 
     CollectionService tags are preserved by Lune's place deserializer as of 0.10.5.
 ]]
