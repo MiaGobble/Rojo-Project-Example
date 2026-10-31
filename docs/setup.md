@@ -10,18 +10,20 @@ You'll need to do a couple of things get this all set up, including:
 * And more!
 
 ## First-time stuff
-You'll need to do a few things as a one-time thing, if you have not already. You only need to do these once for them to work for all of your projects!
+You'll need to do a few things one time only, if you have not already. You only need to do these once for them to work for all of your projects!
 
-### Installing Rokit
-You will need [Rokit](https://github.com/rojo-rbx/rokit) to use Rojo, Pesde, and Lune.
+### Installing Rokit (once per machine)
+You will need [Rokit](https://github.com/rojo-rbx/rokit) to use Rojo, Pesde, rbx-merge, and Lune.
 
 To download Rokit on macOS or Linux, run this in your terminal:
-```
+
+```sh
 curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
 ```
 
 To download Rokit on Windows, run this in PowerShell:
-```
+
+```sh
 Invoke-RestMethod https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.ps1 | Invoke-Expression
 ```
 
@@ -31,25 +33,51 @@ First, you'll need to publish your repository on GitHub. To do so, do the follow
 * Clone repository locally (such as through GitHub desktop)
 * Copy-paste everything from the template into the clone directory
 
-### Installing tools
+### Installing tools (once per clone)
 To install the tools included with the project, run `rokit install` in the folder's terminal.
 
-### Installing packages
+### Installing packages (once per clone)
 To install project packages, run `pesde install` in the folder's terminal.
 
-### Generating initial sourcemap
+:::warning
+
+You will need to reinstall packages every time you change `pesde.toml`!
+
+:::
+
+### Generating initial sourcemap (once per clone)
 To generate the initial sourcemap, run this in your terminal:
+
 ```
 rojo sourcemap default.project.json --output sourcemap.json
 ```
 
-### Customizing your stuff
+### Setting up rbx-merge
+rbx-merge is used to clean up diffs in version control over `game.rbxl`.
+
+**Once per repository**, run the following:
+
+```sh
+rbx-merge install --write-gitattributes
+git add .gitattributes
+git commit -m "Mark Roblox files binary"
+```
+
+And **once per clone**, run the following:
+
+```sh
+rbx-merge install
+rbx-merge doctor
+```
+
+### Customizing your stuff (once per repository)
 It's recommended you do the following to customize your repository further:
 * Remove default license
 * Change *README* to your own stuff
 * Edit *moonwave.toml* (https://eryn.io/moonwave/docs/Configuration)
+* Remove these docs
 
-## Setting up GitHub secrets
+## Setting up GitHub secrets (once per repository)
 You will need to set up secrets for automated publishing.
 
 ### On Roblox
