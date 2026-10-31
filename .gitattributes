@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Roblox place/model files must stay binary (rbx-merge)
+*.rbxl  binary
+*.rbxlx binary
+*.rbxm  binary
+*.rbxmx binary
