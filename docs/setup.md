@@ -114,3 +114,5 @@ For the second secret, use these details:
 Lastly, you'll need a secret with these details:
 * Name: `PLACE_ID`
 * Secret: Your main place ID (not the universe ID)
+
+Finally, take a look at `.github/workflows/publish.yml` in your repository. Change the branch that triggers this from `none` to `main`.
