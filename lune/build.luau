@@ -3,11 +3,9 @@
 --[[
     This script builds the Roblox project by doing two things:
     1. Creating a temporary build file from the Rojo project
-    2. Merging the Rojo project with game.rbxlx for a final build.rbxl
+    2. Merging the Rojo project with game.rbxl for a final build.rbxl
 
     When syncing code to a local file, *always* do it to build.rbxl. This ensures version control doesn't screw up.
-
-    While more complicated for building, we opt to use rbxl instead of rbxlx for the final build file. This is because it reads, writes, and publishes much faster than the XML format.
 
     The reason we even build games this way is because of two reasons:
     1. It makes editing and implementing assets much easier, and
@@ -16,9 +14,7 @@
     R15 avatar settings can be toggled using the IS_R15_ENABLED constant. If you want to change specific properties, you can modify the code block that implements the R15 properties accordingly.
     Do note that the R15-related settings only take effect on the local build, and do not affect the published game.
 
-    CollectionService tags (including multi-tag instances, which are null-separated
-    in the file format) are preserved by Lune's place deserializer as of 0.10.5 —
-    no XML rewriting is required.
+    CollectionService tags are preserved by Lune's place deserializer as of 0.10.5.
 ]]
 
 -- Constants
@@ -45,12 +41,12 @@ if not rojoBuild.ok then
 end
 
 -- Load main build file
-if not fs.isFile("game.rbxlx") then
-    print("Error: 'game.rbxlx' template file not found. Save your game setup to the root first!")
+if not fs.isFile("game.rbxl") then
+    print("Error: 'game.rbxl' template file not found. Save your game setup to the root first!")
     process.exit(1)
 end
 
-local baseFileBuffer = fs.readFile("game.rbxlx")
+local baseFileBuffer = fs.readFile("game.rbxl")
 local syncFileBuffer = fs.readFile("temp_sync.rbxm")
 
 local game = roblox.deserializePlace(baseFileBuffer)
@@ -91,9 +87,6 @@ if IS_R15_ENABLED then
     -- Lune Instance types do not expose class-specific properties; cast for StarterPlayer fields.
     local starterPlayer = game:GetService("StarterPlayer") :: any
     starterPlayer.GameSettingsAvatar = (roblox :: any).Enum.GameAvatarType.R15
-    starterPlayer.GameSettingsScaleRangeBodyType = (roblox :: any).NumberRange.new(1, 1)
-    starterPlayer.GameSettingsScaleRangeHead = (roblox :: any).NumberRange.new(1, 1)
-    starterPlayer.GameSettingsScaleRangeHeight = (roblox :: any).NumberRange.new(5, 5)
 end
 
 -- Write and cleanup
