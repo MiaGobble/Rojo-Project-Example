@@ -16,20 +16,19 @@ lune run lune/build
 
 :::danger
 
-**DO NOT EDIT/SYNC CODE IN `game.rbxlx`**! This can lead to massive, difficult-to-fix merge conflicts.
+**DO NOT EDIT/SYNC CODE IN `game.rbxl`**! This can lead to massive, difficult-to-fix merge conflicts.
 
 :::
 
 ## Editing assets or services
-Edit assets/services directly in `game.rbxlx`. Save these changes by saving the file normally.
+Edit assets/services directly in `game.rbxl`. Save these changes by saving the file normally.
 
 ## Editing remotes
-Edit remote events/functions in `src/Shared/Remotes.model.json`, using [Rojo model.json format](https://rojo.space/docs/v7/sync-details/#json-models).
+Edit remote events/functions in `src/Shared/Remotes.model.json`, using [Rojo model.json format](https://rojo.space/docs/v7/sync-details/#json-models). Alternatively, create a `Remotes.luau` file where the remotes folder would go, which as a dictionary of remote signals/events created by a networking library.
 
 :::info
 
-It's important that your game file is a `rbxlx` file, not `rbxl`. This makes merging on GitHub much easier!
-
+`game.rbxl` is a binary place file. [rbx-merge](https://github.com/kennethloeffler/rbx-merge) is set up so Git can still diff and merge it. Follow the rbx-merge steps in the setup docs once per clone.
 :::
 
 ## Publishing
