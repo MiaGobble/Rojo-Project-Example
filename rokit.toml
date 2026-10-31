@@ -1,4 +1,5 @@
 [tools]
-lune = "lune-org/lune@0.10.4"
+lune = "lune-org/lune@0.11.1"
 pesde = "pesde-pkg/pesde@0.7.4+registry.0.2.3"
-rojo = "rojo-rbx/rojo@7.7.0"
+rojo = "rojo-rbx/rojo@7.7.1"
+rbx-merge = "kennethloeffler/rbx-merge@0.2.0"
