@@ -14,3 +14,5 @@ luau-lsp.completion.autocompleteEnd: true # Write "end" automatically for things
 luau-lsp.completion.fillCallArguments: false # This can be pretty annoying
 luau-lsp.completion.showAnonymousAutofilledFunction: false # Also very annoying when it happens
 ```
+
+Also ensure that the plugin is regenerating the Rojo sourcemap when your tree updates! This is handy for many of the other tools.
